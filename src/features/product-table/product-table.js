@@ -1,22 +1,26 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import styles from "./product-table.module.css";
-import { SearchBox } from "../search-box/search-box";
 import { ProductItem } from "../product-item/product-item";
 
-const staticItems = [
-  { id: "item-1", label: "item 1" },
-  { id: "item-2", label: "item 2" },
-  { id: "item-3", label: "item 3" },
-];
-
-const productList = () => {
-  return staticItems.map((item) => {
-    return <ProductItem key={item.id}>{item.label}</ProductItem>;
+const productList = (props) => {
+  if (!props.searchText) {
+    return props.products.map((product) => {
+      return <ProductItem key={product.id} label={product.label}></ProductItem>;
+    });
+  }
+  const filteredProducts = [];
+  props.products.forEach((product) => {
+    if (product.label.includes(props.searchText)) {
+      filteredProducts.push(
+        <ProductItem key={product.id} label={product.label}></ProductItem>
+      );
+    }
   });
+  return filteredProducts;
 };
 
-export function ProductTable() {
+export function ProductTable(props) {
   //   const count = useSelector(selectCount);
   //   const dispatch = useDispatch();
   //   const [incrementAmount, setIncrementAmount] = useState('2');
@@ -25,8 +29,7 @@ export function ProductTable() {
 
   return (
     <div className={styles.wrapper}>
-      <SearchBox></SearchBox>
-      <ul>{productList()}</ul>
+      <ul>{productList(props)}</ul>
     </div>
   );
 }

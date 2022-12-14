@@ -4,7 +4,7 @@ import styles from "./product-item.module.css";
 import { SearchBox } from "../search-box/search-box";
 import { Button } from "../button/button";
 
-export function ProductItem() {
+export function ProductItem(props) {
   //   const count = useSelector(selectCount);
   //   const dispatch = useDispatch();
   //   const [incrementAmount, setIncrementAmount] = useState('2');
@@ -15,11 +15,11 @@ export function ProductItem() {
     <li className={styles.wrapper}>
       <ul>
         <li>
-          <label>Item Description</label>
+          <label>{props.label}</label>
         </li>
 
         <li>
-          <label>Price</label>
+          <label>{props.price}</label>
         </li>
         <li>
           <label>Add to Cart</label>
