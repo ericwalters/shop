@@ -6,8 +6,8 @@ import { ProductItem } from "../product-item/product-item";
 
 const staticItems = [
   { id: "item-1", label: "item 1" },
-  { id: "item-1", label: "item 2" },
-  { id: "item-1", label: "item 3" },
+  { id: "item-2", label: "item 2" },
+  { id: "item-3", label: "item 3" },
 ];
 
 const productList = () => {

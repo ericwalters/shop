@@ -13,9 +13,18 @@ export function ProductItem() {
 
   return (
     <li className={styles.wrapper}>
-      <label>Item Description</label>
-      <label>Price</label>
-      <label>Add to Cart</label>
+      <ul>
+        <li>
+          <label>Item Description</label>
+        </li>
+
+        <li>
+          <label>Price</label>
+        </li>
+        <li>
+          <label>Add to Cart</label>
+        </li>
+      </ul>
       <Button></Button>
     </li>
   );
