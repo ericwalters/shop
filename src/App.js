@@ -1,13 +1,14 @@
 import React from "react";
-import logo from "./logo.svg";
-import { Counter } from "./features/counter/Counter";
+// import logo from "./logo.svg";
+// import { Counter } from "./features/counter/Counter";
 import "./App.css";
-import { ProductTable } from "./features/product-table/product-table";
 import { SearchableProductTable } from "./features/searchable-product-table/searchable-product-table";
+import { Header } from "./features/header/header";
 
 function App() {
   return (
     <div>
+      <Header></Header>
       <SearchableProductTable></SearchableProductTable>
       {/* <div className="App">
         <header className="App-header">
