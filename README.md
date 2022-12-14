@@ -1,5 +1,12 @@
 # eCommerce Toy Project
 
+## About
+This is an eCommerce toy project.  I created this as a place for me to play around with new technologies and design patterns.  The current tech stack is:
+- React
+- Redux Toolkit
+- Testing Library
+- Jest
+
 ## Available Scripts
 
 In the project directory, you can run:
