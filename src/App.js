@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <SearchableProductTable></SearchableProductTable>
-      <div className="App">
+      {/* <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <Counter />
@@ -55,7 +55,7 @@ function App() {
             </a>
           </span>
         </header>
-      </div>
+      </div> */}
     </div>
   );
 }
