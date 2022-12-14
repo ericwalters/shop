@@ -2,7 +2,7 @@ import React from "react";
 import logo from "./logo.svg";
 import { Counter } from "./features/counter/Counter";
 import "./App.css";
-import { ProductTable } from "./app/product-table";
+import { ProductTable } from "./features/product-table/product-table";
 
 function App() {
   return (

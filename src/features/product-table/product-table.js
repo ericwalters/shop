@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import styles from "./product-table.module.css";
-import { SearchBox } from "./search-box";
-import { ProductItem } from "./product-item";
+import { SearchBox } from "../search-box/search-box";
+import { ProductItem } from "../product-item/product-item";
 
 const staticItems = [
   { id: "item-1", label: "item 1" },

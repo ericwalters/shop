@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import styles from "./product-table.module.css";
-import { SearchBox } from "./search-box";
+// import styles from "./product-table.module.css";
+// import { SearchBox } from "../search-box/search-box";
 
 export function Button() {
   // has label, an action, some styling
@@ -11,5 +11,5 @@ export function Button() {
 
   //   const incrementValue = Number(incrementAmount) || 0;
 
-  return <button></button>;
+  return <button>Click me!</button>;
 }

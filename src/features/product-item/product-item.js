@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import styles from "./product-table.module.css";
-import { SearchBox } from "./search-box";
-import { Button } from "./button";
+import styles from "./product-item.module.css";
+import { SearchBox } from "../search-box/search-box";
+import { Button } from "../button/button";
 
 export function ProductItem() {
   //   const count = useSelector(selectCount);
