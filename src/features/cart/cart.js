@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React from "react";
+import { useSelector } from "react-redux";
 import styles from "./cart.module.css";
 import { CartItem } from "../cart-item/cart-item";
 
@@ -17,5 +17,5 @@ function cartItems(items) {
 
 export function Cart() {
   const items = useSelector((state) => state.cart.cartItems);
-  return <div className={styles.wrapper}>{cartItems(items)}</div>;
+  return <ul className={styles.wrapper}>{cartItems(items)}</ul>;
 }

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
 import { SearchBox } from "../search-box/search-box";
 import { ProductTable } from "../product-table/product-table";
 
@@ -10,8 +9,6 @@ const products = [
 ];
 
 export function SearchableProductTable() {
-  //   const count = useSelector(selectCount);
-  //   const dispatch = useDispatch();
   const [searchText, setSearchText] = useState("");
 
   return (

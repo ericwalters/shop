@@ -1,6 +1,6 @@
 import cartReducer, { add, remove } from "./cartSlice";
 import { ProductModel } from "../../models/product-model";
-
+//todo: productAdapter use needs to mimic how it's used in the app - new ProductAdapter(new ProductModel(props))
 describe("cart reducer", () => {
   const initialState = {
     cartItems: [],
