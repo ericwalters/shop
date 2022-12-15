@@ -1,13 +1,11 @@
-import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React from "react";
+import { useDispatch } from "react-redux";
+import { remove } from "../cart/cartSlice";
 import styles from "./cart-item.module.css";
 
 export function CartItem(props) {
-  //   const count = useSelector(selectCount);
-  //   const dispatch = useDispatch();
-  //   const [incrementAmount, setIncrementAmount] = useState('2');
-
-  //   const incrementValue = Number(incrementAmount) || 0;
+  // todo: refactor to use product item instead
+  const dispatch = useDispatch();
   return (
     <li className={styles.wrapper}>
       <ul>
@@ -20,9 +18,14 @@ export function CartItem(props) {
         <li>
           <label>{props.price}</label>
         </li>
-        <li>
-          <label>Add to Cart</label>
-        </li>
+        <button
+          className={styles.button}
+          onClick={() => {
+            dispatch(remove(props.id));
+          }}
+        >
+          Remove from Cart
+        </button>
       </ul>
     </li>
   );

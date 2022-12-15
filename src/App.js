@@ -4,12 +4,14 @@ import React from "react";
 import "./App.css";
 import { SearchableProductTable } from "./features/searchable-product-table/searchable-product-table";
 import { Header } from "./features/header/header";
+import { Cart } from "./features/cart/cart";
 
 function App() {
   return (
     <div>
       <Header></Header>
       <SearchableProductTable></SearchableProductTable>
+      <Cart></Cart>
       {/* <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />

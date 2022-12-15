@@ -1,13 +1,21 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import styles from "./cart.module.css";
+import { CartItem } from "../cart-item/cart-item";
 
-export function Cart(props) {
-  //   const count = useSelector(selectCount);
-  //   const dispatch = useDispatch();
-  //   const [incrementAmount, setIncrementAmount] = useState('2');
+function cartItems(items) {
+  return items.map((item) => (
+    <CartItem
+      id={item.id}
+      key={item.id}
+      label={item.label}
+      price={item.price}
+      quantity={item.quantity}
+    ></CartItem>
+  ));
+}
 
-  //   const incrementValue = Number(incrementAmount) || 0;
-
-  return <div className={styles.wrapper}></div>;
+export function Cart() {
+  const items = useSelector((state) => state.cart.cartItems);
+  return <div className={styles.wrapper}>{cartItems(items)}</div>;
 }

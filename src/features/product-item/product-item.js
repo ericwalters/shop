@@ -18,7 +18,6 @@ export function ProductItem(props) {
         <li>
           <label>{props.label}</label>
         </li>
-
         <li>
           <label>{props.price}</label>
         </li>

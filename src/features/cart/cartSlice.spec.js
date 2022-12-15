@@ -19,6 +19,14 @@ describe("cart reducer", () => {
       const second = cartReducer(first, add(new ProductModel({ id: "chair" })));
       expect(second.quantity).toEqual(2);
     });
+    it("should not allow duplicate item objects in cart", () => {
+      const first = cartReducer(
+        initialState,
+        add(new ProductModel({ id: "chair" }))
+      );
+      const second = cartReducer(first, add(new ProductModel({ id: "chair" })));
+      expect(second.quantity).toEqual(1);
+    });
   });
 
   describe("remove", () => {
