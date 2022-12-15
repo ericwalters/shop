@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   cartItems: [],
+  expanded: false,
 };
 
 export const cartSlice = createSlice({
@@ -22,10 +23,13 @@ export const cartSlice = createSlice({
         (item) => item.id !== action.payload
       );
     },
+    toggleVisibility: (state) => {
+      state.expanded = !state.expanded;
+    },
   },
 });
 
-export const { add, remove } = cartSlice.actions;
+export const { add, remove, toggleVisibility } = cartSlice.actions;
 export const cartCount = (state) => state.cart.cartItems.length;
 export const itemsInCart = (state) => state.cart.cartItems;
 
