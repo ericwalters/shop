@@ -10,6 +10,7 @@ export function SearchBox(props) {
     <div className={styles.wrapper}>
       <input
         type="search"
+        data-testid="searchbox--input"
         onChange={onSearchChange.bind(null, props)}
         value={props.searchText}
       ></input>

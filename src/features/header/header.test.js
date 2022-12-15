@@ -7,7 +7,7 @@ import { Header } from "./header";
 test("renders the website title", () => {
   render(
     <Provider store={store}>
-      <Header label="my item" price="99" quantity="1"></Header>
+      <Header></Header>
     </Provider>
   );
 
