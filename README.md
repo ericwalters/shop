@@ -10,6 +10,7 @@ This is an eCommerce toy project. I created this as a way for me to showcase my 
 - [Redux Toolkit](https://redux-toolkit.js.org/)
 - [Testing Library](https://testing-library.com/)
 - [Jest](https://jestjs.io/)
+- [Webpack](https://webpack.js.org/)
 
 ## Scripts
 
