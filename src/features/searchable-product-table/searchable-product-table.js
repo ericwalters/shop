@@ -2,10 +2,29 @@ import React, { useState } from "react";
 import { SearchBox } from "../search-box/search-box";
 import { ProductTable } from "../product-table/product-table";
 
+// todo: maybe fake out an async call here?
 const products = [
-  { id: "item-1", label: "item 1", price: "$5", description: "an item" },
-  { id: "item-2", label: "item 2", price: "$10", description: "an item" },
-  { id: "item-3", label: "item 3", price: "$100", description: "an item" },
+  { id: "item-1", label: "chair", price: "$5", description: "you sit on it" },
+  {
+    id: "item-2",
+    label: "bike",
+    price: "$10",
+    description: "for riding down the street",
+  },
+  {
+    id: "item-3",
+    label: "keyboard",
+    price: "$100",
+    description: "for typing on",
+  },
+  { id: "item-4", label: "laptop", price: "$1000", description: "for coding" },
+  { id: "item-5", label: "desktop", price: "$2000", description: "for gaming" },
+  {
+    id: "item-6",
+    label: "television",
+    price: "$2000",
+    description: "for watching",
+  },
 ];
 
 export function SearchableProductTable() {

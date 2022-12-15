@@ -28,9 +28,5 @@ const productList = (props) => {
 };
 
 export function ProductTable(props) {
-  return (
-    <div className={styles.wrapper}>
-      <ul>{productList(props)}</ul>
-    </div>
-  );
+  return <div className={styles.wrapper}>{productList(props)}</div>;
 }
