@@ -2,15 +2,8 @@ import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import styles from "./product-item.module.css";
 import { add } from "../cart/cartSlice";
-//todo: use product model adapter class for this function
-const toProductModel = (props) => {
-  return {
-    id: props.id,
-    label: props.label,
-    price: props.price,
-    description: props.description,
-  };
-};
+import { ProductAdapter } from "../../models/product-adapter";
+import { ProductModel } from "../../models/product-model";
 
 export function ProductItem(props) {
   //   const count = useSelector(selectCount);
@@ -33,7 +26,9 @@ export function ProductItem(props) {
           <button
             className={styles.button}
             onClick={() => {
-              dispatch(add(toProductModel(props)));
+              dispatch(
+                add(new ProductAdapter(new ProductModel(props)).serialize())
+              );
             }}
           >
             Add to Cart

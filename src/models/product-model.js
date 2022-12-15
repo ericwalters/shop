@@ -1,5 +1,4 @@
 export class ProductModel {
-  // todo: add adapter class so that these data models can work with redux
   constructor(product) {
     this.id = product.id;
     this.price = product.price || 0;
