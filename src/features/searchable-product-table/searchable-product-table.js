@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { SearchBox } from "../search-box/search-box";
 import { ProductTable } from "../product-table/product-table";
+import styles from "./searchable-product-table.module.css";
 
 // todo: maybe fake out an async call here?
 const products = [
@@ -31,7 +32,7 @@ export function SearchableProductTable() {
   const [searchText, setSearchText] = useState("");
 
   return (
-    <div>
+    <div className={styles.wrapper}>
       <SearchBox
         setSearchText={setSearchText}
         searchText={searchText}
