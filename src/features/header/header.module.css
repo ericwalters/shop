@@ -1,0 +1,15 @@
+header {
+  height: 50px;
+  width: 100%;
+}
+
+.title {
+  color: blue;
+  font-size: 40px;
+}
+
+.cartCount {
+  float: right;
+  color: red;
+  font-size: 22px;
+}

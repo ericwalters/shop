@@ -1,15 +1,12 @@
-import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React from "react";
+import { useDispatch } from "react-redux";
 import styles from "./product-item.module.css";
-import { SearchBox } from "../search-box/search-box";
-import { Button } from "../button/button";
+import { add } from "../cart/cartSlice";
+import { ProductAdapter } from "../../models/product-adapter";
+import { ProductModel } from "../../models/product-model";
 
 export function ProductItem(props) {
-  //   const count = useSelector(selectCount);
-  //   const dispatch = useDispatch();
-  //   const [incrementAmount, setIncrementAmount] = useState('2');
-
-  //   const incrementValue = Number(incrementAmount) || 0;
+  const dispatch = useDispatch();
 
   return (
     <li className={styles.wrapper}>
@@ -17,15 +14,22 @@ export function ProductItem(props) {
         <li>
           <label>{props.label}</label>
         </li>
-
         <li>
           <label>{props.price}</label>
         </li>
         <li>
-          <label>Add to Cart</label>
+          <button
+            className={styles.button}
+            onClick={() => {
+              dispatch(
+                add(new ProductAdapter(new ProductModel(props)).serialize())
+              );
+            }}
+          >
+            Add to Cart
+          </button>
         </li>
       </ul>
-      <Button></Button>
     </li>
   );
 }
