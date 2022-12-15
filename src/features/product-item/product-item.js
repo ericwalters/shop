@@ -20,6 +20,7 @@ export function ProductItem(props) {
         <li>
           <button
             className={styles.button}
+            data-testid="product-item--add-to-cart-button"
             onClick={() => {
               dispatch(
                 add(new ProductAdapter(new ProductModel(props)).serialize())

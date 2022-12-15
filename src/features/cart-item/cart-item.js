@@ -20,6 +20,7 @@ export function CartItem(props) {
         </li>
         <button
           className={styles.button}
+          data-testid="cart-item--remove-from-cart-button"
           onClick={() => {
             dispatch(remove(props.id));
           }}
