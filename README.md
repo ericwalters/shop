@@ -4,7 +4,7 @@ Work in progress.
 
 ## About
 
-This is an eCommerce toy project. I created this as a way for me to showcase my skills and play around with new technologies. The current tech stack is:
+This is an eCommerce toy project. I created this as a way for me to showcase my skills, play around with new technologies, and have some fun! The current tech stack is:
 
 - [React](https://reactjs.org/)
 - [Redux Toolkit](https://redux-toolkit.js.org/)
