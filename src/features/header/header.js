@@ -12,9 +12,6 @@ export function Header() {
         BuyMyStuff.com
       </div>
       <div className={styles.cartCount}>{count}</div>
-      {
-        //todo: refactor styles to not use float
-      }
       <button
         className={styles.openCart}
         onClick={() => {
