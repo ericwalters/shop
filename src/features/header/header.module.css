@@ -13,3 +13,8 @@ header {
   color: red;
   font-size: 22px;
 }
+
+.openCart {
+  float: right;
+  margin-right: 10px;
+}
