@@ -15,7 +15,16 @@ function cartItems(items) {
   ));
 }
 
+function expandedStyle(expanded) {
+  return expanded ? { display: "block" } : { display: "none" };
+}
+
 export function Cart() {
+  const expanded = useSelector((state) => state.cart.expanded);
   const items = useSelector((state) => state.cart.cartItems);
-  return <ul className={styles.wrapper}>{cartItems(items)}</ul>;
+  return (
+    <ul style={expandedStyle(expanded)} className={styles.wrapper}>
+      {cartItems(items)}
+    </ul>
+  );
 }

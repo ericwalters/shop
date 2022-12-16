@@ -9,7 +9,7 @@ export function ProductItem(props) {
   const dispatch = useDispatch();
 
   return (
-    <li className={styles.wrapper}>
+    <div className={styles.wrapper}>
       <ul>
         <li>
           <label>{props.label}</label>
@@ -31,6 +31,6 @@ export function ProductItem(props) {
           </button>
         </li>
       </ul>
-    </li>
+    </div>
   );
 }

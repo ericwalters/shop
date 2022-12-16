@@ -1,13 +1,15 @@
-import cartReducer, { add, remove } from "./cartSlice";
+import cartReducer, { add, remove, toggleVisibility } from "./cartSlice";
 import { ProductModel } from "../../models/product-model";
 //todo: productAdapter use needs to mimic how it's used in the app - new ProductAdapter(new ProductModel(props))
 describe("cart reducer", () => {
   const initialState = {
     cartItems: [],
+    expanded: false,
   };
   it("should handle initial state", () => {
     expect(cartReducer(undefined, { type: "unknown" })).toEqual({
       cartItems: [],
+      expanded: false,
     });
   });
 
@@ -46,6 +48,14 @@ describe("cart reducer", () => {
       const second = cartReducer(first, remove("chair-0"));
       const third = cartReducer(second, remove("chair-0"));
       expect(third.cartItems.length).toEqual(1);
+    });
+  });
+  describe("open", () => {
+    it("toggles the expanded state", () => {
+      const first = cartReducer(initialState, toggleVisibility());
+      expect(first.expanded).toEqual(true);
+      const second = cartReducer(first, toggleVisibility());
+      expect(second.expanded).toEqual(false);
     });
   });
 });

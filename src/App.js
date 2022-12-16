@@ -7,7 +7,7 @@ import { Cart } from "./features/cart/cart";
 function App() {
   //todo: refactor to use flexbox
   return (
-    <div>
+    <div className="app">
       <Header></Header>
       <SearchableProductTable></SearchableProductTable>
       <Cart></Cart>

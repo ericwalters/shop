@@ -1,15 +1,21 @@
 header {
-  height: 50px;
   width: 100%;
+  grid-area: header;
 }
 
 .title {
   color: blue;
   font-size: 40px;
+  display: inline;
 }
 
 .cartCount {
-  float: right;
+  display: inline;
   color: red;
   font-size: 22px;
+}
+
+.openCart {
+  display: inline;
+  margin-right: 10px;
 }

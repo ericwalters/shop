@@ -1,0 +1,4 @@
+.wrapper {
+  height: 100%;
+  grid-area: content;
+}
