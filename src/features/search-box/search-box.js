@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./search-box.module.css";
 
 function onSearchChange(props, e) {
   props.setSearchText(e.target.value);
