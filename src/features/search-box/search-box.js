@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./search-box.module.css";
 
 function onSearchChange(props, e) {
   props.setSearchText(e.target.value);
@@ -6,7 +7,7 @@ function onSearchChange(props, e) {
 
 export function SearchBox(props) {
   return (
-    <div>
+    <div className={styles.wrapper}>
       <input
         type="search"
         data-testid="searchbox--input"
