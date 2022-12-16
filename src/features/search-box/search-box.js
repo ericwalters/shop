@@ -7,7 +7,7 @@ function onSearchChange(props, e) {
 
 export function SearchBox(props) {
   return (
-    <div className={styles.wrapper}>
+    <div>
       <input
         type="search"
         data-testid="searchbox--input"

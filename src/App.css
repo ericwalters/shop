@@ -4,7 +4,7 @@
 }
 .app {
   display: grid;
-  /* grid-gap: 10px; */
+  grid-gap: 10px;
   grid-template-columns: auto auto 20%;
   grid-template-areas:
     "header  header header"
